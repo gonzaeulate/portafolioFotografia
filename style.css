@@ -533,3 +533,17 @@ div.recent_work_container section.recent_work div.recent_img div p {
 /* ++++++++++++++++ */
 /* CONTACT PAGE Fin */
 /* ++++++++++++++++ */
+
+
+/* ++++++++++++++++ */
+/* MENSAJE DE ERROR open */
+/* ++++++++++++++++ */
+
+.error {
+    border: 2px solid red;
+    color: red;
+}
+
+/* ++++++++++++++++ */
+/* MENSAJE DE ERROR fin  */
+/* ++++++++++++++++ */
