@@ -4,14 +4,28 @@
 
 let formRegistro = document.querySelector(".contact_form")
 
-let validarDatos = (event) => {
+function validarDatos(event) {
     event.preventDefault();
 
     let inputNombre = document.querySelector("#name");
+    let inputLastName = document.querySelector("#lastName")
+    let inputEmail = document.querySelector("#email")
+    let inputPhone = document.querySelector("#phone")
 
     if (inputNombre.value === "") {
-        let divError = document.querySelector("#errorNombre")
-        divError.innerHTML = "El campo Nombre es obligatorio"
+        inputNombre.placeholder = "Debe ingresar un nombre";
+        inputNombre.classList.add("error");
+    } else if (inputLastName.value === "") {
+        inputLastName.placeholder = "Debe ingresar un Apellido";
+        inputLastName.classList.add("error");
+    } else if (inputEmail.value === "") {
+        inputEmail.placeholder = "Debe ingresar un email";
+        inputEmail.classList.add("error");
+    } else if (inputPhone.value === "") {
+        inputPhone.placeholder = "Debe ingresar un numero de telefono";
+        inputPhone.classList.add("error");
+    } else {
+            formRegistro.submit();
     }
 }
 
