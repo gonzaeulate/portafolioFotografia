@@ -87,7 +87,8 @@ header div.back div.menu a.logo p {
     transition: 0.8s ease; /* Transition to hover effect */
 }
 
-.menu .navbar ul li a:hover {
+.menu .navbar ul li a:hover,
+.menu .navbar ul li a.active {
     color: #C2AF67;
     border-bottom: 2px #C2AF67 solid;
 }
@@ -125,8 +126,9 @@ header div.back div.menu a.logo p {
         left: 0;
         right: 0;
         background-color: #272727;
-        display: none;
-        transition: 1s ease-in;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out;
     }
     
     .menu .navbar ul li {
@@ -134,7 +136,7 @@ header div.back div.menu a.logo p {
     }
 
     #menu:checked ~ .navbar {
-        display: initial;
+        max-height: 500px; /* Ajusta según la altura de tu menú */
     }
 }
 
