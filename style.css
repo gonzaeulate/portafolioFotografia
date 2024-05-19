@@ -530,7 +530,35 @@ div.recent_work_container section.recent_work div.recent_img div p {
     padding: 1rem;
     margin: 1rem;
 }
-  
+
+/* Estilo para el texto "¿Cómo nos conociste?" */
+.contact_form p {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Estilo para el select */
+.contact_form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.25em 0px 0.25em 0px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #707070;
+    font-size: 16px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilo para hover y foco en select */
+.contact_form select:hover,
+.contact_form select:focus {
+    border-color: #C2AF67;
+    background-color: #f9f9f9;
+    outline: none; /* Quitar el outline del foco */
+}
+
 @media screen and (max-width: 1045px) {
     .contact--HTML {
         margin: 3rem 1rem;
@@ -561,6 +589,7 @@ div.recent_work_container section.recent_work div.recent_img div p {
         width: 100%;
     }
 }
+
 /* ++++++++++++++++ */
 /* CONTACT PAGE Fin */
 /* ++++++++++++++++ */

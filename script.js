@@ -1,54 +1,63 @@
 
 // +++++++++++++++++++++++++++ 
 // Open VALIDACION FORMULARIO DE CONTACTO
-
-let formRegistro = document.querySelector(".contact_form")
+let formRegistro = document.querySelector(".contact_form");
 
 function validarDatos(event) {
     event.preventDefault();
 
     let inputNombre = document.querySelector("#name");
-    let inputLastName = document.querySelector("#lastName")
-    let inputEmail = document.querySelector("#email")
-    let inputPhone = document.querySelector("#phone")
+    let inputLastName = document.querySelector("#lastName");
+    let inputEmail = document.querySelector("#email");
+    let inputPhone = document.querySelector("#phone");
+
+    // Inicialmente, eliminar la clase de error de todos los campos
+    let inputs = [inputNombre, inputLastName, inputEmail, inputPhone];
+    inputs.forEach(input => {
+        input.classList.remove("error");
+        input.placeholder = input.defaultPlaceholder; // Restaurar placeholder original
+    });
+
+    let formValido = true;
 
     if (inputNombre.value === "") {
         inputNombre.placeholder = "Debe ingresar un nombre";
         inputNombre.classList.add("error");
-    } else if (inputLastName.value === "") {
+        formValido = false;
+    }
+    if (inputLastName.value === "") {
         inputLastName.placeholder = "Debe ingresar un Apellido";
         inputLastName.classList.add("error");
-    } else if (inputEmail.value === "") {
+        formValido = false;
+    }
+    if (inputEmail.value === "") {
         inputEmail.placeholder = "Debe ingresar un email";
         inputEmail.classList.add("error");
-    } else if (inputPhone.value === "") {
+        formValido = false;
+    }
+    if (inputPhone.value === "") {
         inputPhone.placeholder = "Debe ingresar un numero de telefono";
         inputPhone.classList.add("error");
-    } else {
-            formRegistro.submit();
+        formValido = false;
+    }
+
+    if (formValido) {
+        formRegistro.submit();
     }
 }
 
-formRegistro.addEventListener("submit", validarDatos)
-
-
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    let formulario = document.querySelector("form");
-
-    formulario.addEventListener("submit", function(event) {
-        let inputNombre = document.getElementById("name");
-
-        if (inputNombre.value === "") {
-            inputNombre.placeholder = "Debe ingresar un nombre";
-            inputNombre.classList.add("error");
-            event.preventDefault();
-        } else {
-            inputNombre.classList.remove("error");
+// Agregar eventos de entrada para eliminar la clase de error cuando el usuario empieza a escribir
+document.querySelectorAll('.contact_form input').forEach(input => {
+    input.addEventListener('input', function() {
+        if (input.classList.contains('error')) {
+            input.classList.remove('error');
+            input.placeholder = input.defaultPlaceholder; // Restaurar placeholder original
         }
     });
-}); 
-*/
+});
+
+formRegistro.addEventListener("submit", validarDatos);
+
 
 // End VALIDACION FORMULARIO DE CONTACTO 
 // +++++++++++++++++++++++++++ 
