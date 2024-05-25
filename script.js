@@ -93,3 +93,16 @@ formRegistro.addEventListener("submit", validarDatos);
 // End VALIDACION FORMULARIO DE CONTACTO 
 // +++++++++++++++++++++++++++ 
 
+
+
+
+// BACK TO TOP ICON Open
+document.addEventListener('scroll', function() {
+    const topButton = document.getElementById('top');
+    if (window.scrollY > 300) { // Se puede cambiar 300 al número de píxeles en el que se quiera que aparezca el icono
+        topButton.style.display = 'inline-flex';
+    } else {
+        topButton.style.display = 'none';
+    }
+  });
+  // BACK TO TOP ICON Close
