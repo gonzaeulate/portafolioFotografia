@@ -13,14 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/juu3hyl.css">
-    
 </head>
 <body id="index_html">
     <!-- LOGO + BARRA DE NAVEGACIÓN -->
     <header>
         <div class="back">
             <div class="menu container">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <img src="img/logo_anadg_white.png" alt="logo">
                     <p>3group</p>
                 </a>
@@ -31,7 +30,7 @@
                 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="index.html" style="border-bottom: 2px #fff solid;" class="active">Inicio</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="about.html">Sobre mi</a></li>
                         <li><a href="contact.html">Contacto</a></li>
@@ -40,85 +39,138 @@
             </div>
         </div>
     </header>
-    
 
-    <!-- CONTENIDO DE LA PÁGINA - página en construcción -->
+    <!-- HERO IMAGE -->
     <section class="index_open">
         <article class="main_photo">
-            <!-- <img src="img/FOTO PRINCIPAL.jpg" alt="foto de boda en méxico"> -->
         </article>
     </section>
-    <div class="recent_work_title-container">
-        <h3 class="recent_work_title">TRABAJOS RECIENTES</h3>
+
+    <!-- ++++++++++++++++++ -->
+    <!-- TRABAJOS RECIENTES -->
+    <!-- ++++++++++++++++++ -->
+    <div class="recent_work_title">
+        <h3 id="trabajos_recientes">trabajos recientes</h3>
     </div>
 
-    <div class="recent_work_container">
+    <div class="recent_work-container">
         <section class="recent_work">
 
             <div class="recent_img">
                 <article class="img1"></article>
-                <div class="recent_work_description_1">
+                <div class="recent_work_description">
                     <h4>Boda en Buenos Aires</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio delectus, dolorum officia qui error amet eveniet voluptatibus omnis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam corporis rem eos consequuntur vero tempora ullam voluptatibus doloribus.</p>
                 </div>
-                <button>Ver Más</button>
+                <div class="thebtn">
+                    <a href="" class="mybtn"><span>Ver más</span></a>
+                </div>
             </div>
 
             <div class="recent_img">
                 <article class="img2"></article>
-                <div>
+                <div class="recent_work_description">
                     <h4>Fotografía Real State</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, porro. Modi accusantium saepe ut impedit delectus doloremque iste.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, dolores. Inventore, doloremque eos maiores vitae odit explicabo enim?</p>
                 </div>
-                <button>Ver Más</button>
+                <div class="thebtn">
+                    <a href="" class="mybtn"><span>Ver más</span></a>
+                </div>
             </div>
 
             <div class="recent_img">
                 <article class="img3"></article>
-                <div>
+                <div class="recent_work_description">
                     <h4>Boda LGTBI en MDQ</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam voluptatum consequatur iusto. Saepe nihil non itaque quo aliquid.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quisquam ad delectus magni? Molestias doloremque accusamus numquam quaerat.</p>
                 </div>
-                <button type="button">Ver Más</button>
+                <div class="thebtn">
+                    <a href="" class="mybtn"><span>Ver más</span></a>
+                </div>
             </div>
 
         </section>
     </div>
 
+    <div class="recent_work_title">
+        <h3 id="trabajos_recientes">Mi ilusión como fotográfo es regalarte un reportaje fotográfico lleno de emociones</h3>
+    </div>
+
+    <!-- ++++++++++++++++++++++++++++ -->
+    <!-- COMENTARIOS DE CLIENTES Open -->
+    <!-- ++++++++++++++++++++++++++++ -->
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+        <q>Has capturado la magia en el aire. Estamos encantados con tu trabajo. Muchas gracias.</q>
+        <p class="author">- Rosie & Chaz</p>
+    </div>
+  
+    <div class="mySlides">
+        <q>Exactamente lo que queríamos. Muchas gracias. Has hecho un trabajo increíble :)</q>
+        <p class="author">- Ernesto Pesuti</p>
+    </div>
+  
+    <div class="mySlides">
+        <q>Nos han tratado de maravilla, con gran profesionalidad y han hecho un trabajo estupendo. No hace falta decir más, solo hay que ver las fotografías.</q>
+        <p class="author">- Tomás Edison</p>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- ++++++++++++++++++++++++++++ -->
+    <!-- COMENTARIOS DE CLIENTES Close -->
+    <!-- ++++++++++++++++++++++++++++ -->
 
 
     <!-- +++++++++++ -->
-    <!-- Open FOOTER -->
-    <footer>
-        <!-- Open BOTONES SOCIAL MEDIA -->
-        <div class="social-media-buttons">
-            <button class="social-media-button">
-                <a href="https://www.instagram.com" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-            </button>
-            <button class="social-media-button" >
-                <a href="https://www.x.com" target="_blank">
-                    <svg class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
-                </a>
-            </button>
-            <button class="social-media-button">
-                <a href="https://www.youtube.com"   target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                </a>
-            </button>
-            <button class="social-media-button">
-                <a href="https://www.linkedin.com" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-            </button>
-        </div>
-        <!-- Close BOTONES SOCIAL MEDIA -->
-        <div id="copyright">
-            <p>Copyright © 2024 Norte Studio | All rights reserved.</p>
-        </div>
-    </footer>
-       <!-- End FOOTER -->
+ <!-- Open FOOTER -->
+ <footer>
+    <!-- Open BOTONES SOCIAL MEDIA -->
+    <div class="social-media-buttons">
+        <button class="social-media-button">
+            <a href="https://www.instagram.com" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+        </button>
+        <button class="social-media-button" >
+            <a href="https://www.x.com" target="_blank">
+                <svg class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+            </a>
+        </button>
+        <button class="social-media-button">
+            <a href="https://www.youtube.com"   target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+        </button>
+        <button class="social-media-button">
+            <a href="https://www.linkedin.com" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+        </button>
+    </div>
+    <!-- Close BOTONES SOCIAL MEDIA -->
+    <div id="copyright">
+        <p>Copyright © 2024 Norte Studio | All rights reserved.</p>
+    </div>
+</footer>
+   <!-- End FOOTER -->
+   <!-- +++++++++++ -->
        <!-- +++++++++++ -->
+
+       <!-- AGREGANDO JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>

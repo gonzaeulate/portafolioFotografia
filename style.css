@@ -7,7 +7,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: "Lato", sans-serif;
+    font-family: "bio-sans", sans-serif;
 }
 
 /* FOOTER SIEMPRE AL FINAL aunque contenido sea más corto */ /* Knowledge Source: https://www.30secondsofcode.org/css/s/footer-at-the-bottom/ */
@@ -18,7 +18,6 @@ body {
     background-color: #EEEEEE;
   }
 
-
 /* +++++++++++++++++++++++++++++++++ */
 /* NAVBAR STYLE Open */     /* Anita */
 /* +++++++++++++++++++++++++++++++++ */
@@ -26,7 +25,7 @@ header {
     position: sticky;
     top: 0px;
     height: fit-content;
-    z-index: 1000; /* Asegura que el header tenga un z-index alto */
+    z-index: 1000;
 } 
 
 header div.back div.container {
@@ -47,11 +46,10 @@ header div.back div.menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000; /* Asegura que el menu tenga un z-index alto */
+    z-index: 1000;
 }
 
 header div.back div.menu a.logo {
-    padding-left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +74,6 @@ header div.back div.menu a.logo p {
 }
 
 .menu .navbar ul li a {
-    font-size: 20px;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
@@ -84,13 +81,12 @@ header div.back div.menu a.logo p {
     margin: 20px;
     color: #FFFFFF;
     display: block;
-    transition: 0.8s ease; /* Transition to hover effect */
+    transition: 0.8s ease;
 }
 
-.menu .navbar ul li a:hover,
-.menu .navbar ul li a.active {
-    color: #C2AF67;
-    border-bottom: 2px #C2AF67 solid;
+.menu .navbar ul li a:hover {
+    color: #76ABAE;
+    border-bottom: 2px #76ABAE solid;
 }
 
 #menu {
@@ -106,8 +102,9 @@ header div.back div.menu a.logo p {
     display: none;
 }
 
-/* NAVBAR STYLE responsive Ini */
-@media (max-width: 1341px) {
+/* NAVBAR STYLE responsive 1 */
+@media only screen and (max-width: 1341px) {
+
     .menu {
         padding: 28px;
     }
@@ -122,13 +119,15 @@ header div.back div.menu a.logo p {
 
     .menu .navbar {
         position: absolute;
-        top: 100%;
+        top: 94%;
         left: 0;
         right: 0;
         background-color: #272727;
-        overflow: hidden;
         max-height: 0;
-        transition: max-height 0.5s ease-in-out;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 2000;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
     }
     
     .menu .navbar ul li {
@@ -136,11 +135,27 @@ header div.back div.menu a.logo p {
     }
 
     #menu:checked ~ .navbar {
-        max-height: 500px; /* Ajusta según la altura de tu menú */
+        max-height: 500px; /* Ajusta este valor según sea necesario */
+        opacity: 1;
     }
 }
 
+/* NAVBAR STYLE responsive 2 */
+@media only screen and (max-width: 420px) {
+    header div.back div.menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: auto;
+        z-index: 1000;
+    }
+
+    header div.back div.container {
+        max-width: none;
+    }
+}
 /* NAVBAR STYLE responsive Fin */
+
 /* ++++++++++++++++++ */
 /* NAVBAR STYLE Close */
 /* ++++++++++++++++++ */
@@ -158,7 +173,6 @@ footer {
     /* padding-inline: 20px; */
     width: 100%;
     height: fit-content;
-
     margin-top: auto; /* PARA FOOTER SIEMPRE AL FINAL */ /* Knowledge Source: https://www.30secondsofcode.org/css/s/footer-at-the-bottom/ */
 }
 
@@ -263,8 +277,6 @@ section.index_open article.main_photo {
 }
 
 section.index_open article.main_photo {
-    width: 100vw;
-    max-width: 1920px;
     height: 100vh;
     max-height: 650px;
     overflow: hidden;
@@ -276,43 +288,52 @@ section.index_open article.main_photo {
 
 /* +++++++++++++++++ */
 /* ÚLTIMOS TRABAJOS */
-div.recent_work_title-container {
+/* div.recent_work-container {
+    display
+} */
+
+div.recent_work_title {
     display: flex;
     justify-content: center;
-    margin: 30px 10px;
+    align-items: center;
 }
-div h3.recent_work_title {
+div.recent_work_title h3#trabajos_recientes {
     text-align: center;
-    padding: 10px 0px;
     border-top: 0.1rem solid #1E1C1C;
     border-bottom: 0.3rem solid #1E1C1C;
     border-right: 0.3rem solid #1E1C1C;
     border-left: 0.1rem solid #1E1C1C;
-    width: 90%;
     background-color: #FFFFFF;
     font-family: "adobe-caslon-pro", serif;
     font-size: 20px;
     font-weight: 700;
+    width: 90%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-div.recent_work_container {
+div.recent_work-container {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: auto;
     max-width: 1920px;
-    min-width: 370px;
+    min-width: 300px;
     margin-bottom: 30px;
 }
 
-div.recent_work_container section.recent_work {
+div.recent_work-container section.recent_work {
     background-color: #FFFFFF;
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
+    justify-content: center;
     box-shadow: 1px 1px 5px lightgrey;
 }
 
-div.recent_work_container section.recent_work div.recent_img {
+div.recent_work-container section.recent_work div.recent_img {
     display: inline-block;
     padding: 10px;
     width: min-content;
@@ -320,54 +341,160 @@ div.recent_work_container section.recent_work div.recent_img {
     overflow: hidden;
 }
 
-div.recent_work_container section.recent_work div.recent_img article {
+div.recent_work-container section.recent_work div.recent_img article {
     margin-bottom: 10px;
 }
 
-div.recent_work_container section.recent_work div.recent_img article.img1 {
+div.recent_work-container section.recent_work div.recent_img article.img1 {
     background-image: url(img/boda.jpg);
     background-size: cover;
     background-position: center;
-    width: 370px;
+    width: auto;
+    max-width: 370px;
+    min-width: 300px;
     height: 400px;
 }
 
-div.recent_work_container section.recent_work div.recent_img article.img2 {
+div.recent_work-container section.recent_work div.recent_img article.img2 {
     background-image: url(img/real_estate.jpg);
     background-size: cover;
     background-position: center;
-    width: 370px;
+    width: auto;
+    max-width: 370px;
+    min-width: 300px;
     height: 400px;
 }
 
-div.recent_work_container section.recent_work div.recent_img article.img3 {
+div.recent_work-container section.recent_work div.recent_img article.img3 {
     background-image: url(img/boda-lgtb.jpg);
     background-size: cover;
     background-position: center;
-    width: 370px;
+    width: auto;
+    max-width: 370px;
+    min-width: 300px;
     height: 400px;
 }
 
-div.recent_work_container section.recent_work div.recent_img div h4 {
+div.recent_work-container section.recent_work div.recent_img div.recent_work_description h4 {
     margin-bottom: 10px;
     font-family: "adobe-caslon-pro", serif;
     font-size: 24px;
 
 }
 
-div.recent_work_container section.recent_work div.recent_img div p {
+div.recent_work-container section.recent_work div.recent_img div.recent_work_description p {
     color: #a1a1a1;
     font-size: 14PX;
     text-align: justify;
-    margin-bottom: 10px;
 }
 
+div.thebtn {
+    display: flex;
+    justify-content: left;
+    margin-top: 1rem;
+}
+a.mybtn {
+    border: 1px black solid;
+    padding: 0 16px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 22px;
+    height: 30px;
+    justify-content: center;
+    align-content: center;
+    letter-spacing: 0px;
+    text-transform: none;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+    & span {
+        color: #1E1C1C;
+        box-sizing: border-box;
+        letter-spacing: 0px;
+    }
+}
+a.mybtn:hover {
+    background-color: #1E1C1C;
+    & span {
+        color: #FEFEFE;
+    }
+}
 
+/* COMENTARIOS CLIENTES Open */
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+/* COMENTARIOS CLIENTES Fin */
 
 /* ++++++++++++++ */
 /* INDEX PAGE Fin */
 /* ++++++++++++++ */
-
 
 /* +++++++++++++++++++++++++++++++++++++ */
 /* PORTFOLIO PAGE Ini */        /* Gonza */
