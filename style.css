@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
     font-family: "bio-sans", sans-serif;
+    text-decoration: none !important;
 }
 
 /* FOOTER SIEMPRE AL FINAL aunque contenido sea más corto */ /* Knowledge Source: https://www.30secondsofcode.org/css/s/footer-at-the-bottom/ */
@@ -133,6 +133,12 @@ header div.back div.menu a.logo p {
         border-radius: 0 0 0.25cm 0.25cm ;
     }
     
+    body#index_html {
+        .menu .navbar {
+            top: 79%;
+        }
+    }
+
     .menu .navbar ul li {
         width: 100%;
     }
@@ -320,7 +326,7 @@ a#top:hover i  {
   
   .carousel-item img {
     width: 100%;
-    height: 650px;
+    height: 100vh;
     object-fit: cover; 
   }
 
@@ -608,8 +614,9 @@ a.mybtn:hover {
 /* +++++++++++++++++++++++++++++++++ */
 
 /* Open BUTTONS */
+/* Open BUTTONS */
 .btn, .search_btn {
-    border-radius: 0.25em 0px 0.25em 0px;
+    border-radius: 22px;
     font-size: 16px;
     color: #707070;
     padding: 10px 1.5rem;
@@ -621,8 +628,8 @@ a.mybtn:hover {
 }
 
 .search_btn {
-    border: #C2AF67 1px solid;
-    background-color: #C2AF67;
+    border: #76ABAE 1px solid;
+    background-color: #76ABAE;
     text-transform: uppercase;
     font-weight: 600;
     color: #fff;
@@ -630,8 +637,8 @@ a.mybtn:hover {
     transition: all 0.5s ease;
 }
 .search_btn:hover {
-    border: #827545 1px solid;
-    background-color: #827545;
+    border: #5abdc2 1px solid;
+    background-color: #5abdc2;
 }
 
 .reset_btn {
@@ -777,134 +784,153 @@ a.mybtn:hover {
 
 
 /* +++++++++++++++++++++++++++++++++ */
-/* ABOUT PAGE Open */     /* Elias   */
+/* ABOUT PAGE Open /     / Elias   */
 /* +++++++++++++++++++++++++++++++++ */
 
-
-.quienesomos {
-    margin-top: 0px;
-    margin-bottom: 0px;
+@media only screen and (max-width: 720px) {
+    .quienesomos {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
-.somos{
-    background-image: url(./img/paisaje2.jpg);
-    background-size: cover;
-    height: 1400px;
-    font-size: xx-large; 
-    font-family:'bio-sans', sans-serif;
-    text-align: justify;
-    padding: 60px 50px;
-    overflow: auto;
-}
-
-.somosexpl {
-    border: 10px solid rgb(0, 0, 0);
-    margin: 50px;
-    color: #1E1C1C;
-    font-family:'bio-sans', sans-serif;
-    text-align: center;
-}
-
-.row{
-    color:#1E1C1C;
-    font-size: xx-large; 
-    font-family:'adobe-caslon-pro', serif;
-    text-align: justify;
-    background-image: url(./img/hoja.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    padding: 5px;
-}
-
-.col {
-    border: 1px solid;
-    background-color: rgba(210, 218, 223, 0.582);
-    margin: 20px;
-    color: #1E1C1C;
-}
-
-#nota{
-    color:#1E1C1C;
-    /*margin-top: 100px;
-    margin-bottom: 200px;*/
-    font-family:'bio-sans', sans-serif;
-    font-size: xx-large;
-    text-align: center;
-    background-image: url(./img/paisaje2.jpg);
-    padding: 70px 5px;
-}
-
-#info {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size:large;
-    /*width: 100vh;*/
-    padding: auto;
-    font-family: "Pacifico", cursive;
-    font-weight: 600;
-    font-style: normal;
-    background-color: #707070;
-    text-align: center;
-    }
-
-.carouselExampleInterval {
-    padding: 0%;
-    }
-
-@media only screen and (min-width: 720px) {
-        
     .somos{
-    height: 1000px;
-    font-size:xx-large; 
-    font-family:'bio-sans', sans-serif;
-    text-align: center;
-    padding: 200px;
-    overflow: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        padding: 20px 50px 10px 50px;
+        font-size:medium; 
+        font-family:'bio-sans', sans-serif;
+        text-align:left;
+        overflow: auto;
     }
-       
+
+    .somosexpl{
+        margin: 20px;
+        color: #1E1C1C;
+        font-family:'adobe-caslon-pro', serif;
+        text-align: center;
+    }
+
     .row{
-    background-image: url(./img/hoja.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    padding: 200px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        color:#1E1C1C;
+        font-size: large; 
+        font-family:'bio-sans', sans-serif;
+        padding: 40px;
+    }
 
-    color:#1E1C1C;
-    /*margin: 50px;
-    margin-bottom: 50px;*/
-    font-size: xx-large; 
-    font-family:'bio-sans', sans-serif;
-    text-align: justify;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    .col {
+        border: 1px solid;
+        background-color: rgba(210, 218, 223, 0.582);
+        margin: 30px;
+        color: #1E1C1C;
+        text-align: center;
     }
 
     #nota{
-    color: #1E1C1C;
-    /*margin-top: 100px;
-    margin-bottom: 200px;*/
-    font-size: xx-large;
-    text-align: center;
-    background-image: url(./img/paisaje2.jpg);
-    padding: 200px;
+        color:#1E1C1C;
+        font-family:'bio-sans', sans-serif;
+        font-size: large;
+        text-align: center;
+        background-image: url(./img/paisaje2.jpg);
+        padding: 70px 5px;
     }
 
-    #info {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: x-large;
-    /*width: 100vh;*/
-    padding: auto;
-    font-family: "Pacifico", cursive;
-    font-weight: 600;
-    font-style: normal;
-    background-color: #707070;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 900px){
+
+    .somos{
+        background-repeat: no-repeat;
+        height: 300px;
+        padding: 20px 50px 10px 50px;
+        font-size:medium; 
+        font-family:'bio-sans', sans-serif;
+        text-align:center;
+        overflow: auto;
     }
+    
+    .somosexpl {
+        margin: 20px;
+        color: #1E1C1C;
+        font-family:'adobe-caslon-pro', serif;
+        text-align: center;
+    }
+
+    .row{
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        color:#1E1C1C;
+        font-size: large; 
+        font-family:'bio-sans', sans-serif;
+        padding: 30px;
+    }
+
+    .col {
+        border: 1px solid;
+        background-color: rgba(210, 218, 223, 0.582);
+        margin: 20px;
+        color: #1E1C1C;
+        text-align: center;
+    
+    }
+
+    #nota{
+        color:#1E1C1C;
+        font-family:'bio-sans', sans-serif;
+        font-size: large;
+        text-align: center;
+        background-image: url(./img/paisaje2.jpg);
+        padding: 70px 5px;
+    }
+    
+}
+
+@media only screen and (min-width: 900px) {
         
+    .somos{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        font-size:xx-large; 
+        font-family:'bio-sans', sans-serif;
+        text-align: center;
+        padding: 100px;
+        overflow: auto;
+    }
+       
+    .row{
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        padding: 70px;
+        color:#1E1C1C;
+        font-family:'bio-sans', sans-serif;
+        font-size: xx-large; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .col {
+        border: 1px solid;
+        background-color: rgba(210, 218, 223, 0.582);
+        margin: 20px;
+        color: #1E1C1C;
+        text-align: center;
+    }
+
+    #nota{
+        background-image: url(./img/paisaje2.jpg);
+        padding: 200px;
+        color: #1E1C1C;
+        font-size: xx-large;
+        text-align: center;
+       
+    }
+      
 }
    
 /* ++++++++++++++++ */
