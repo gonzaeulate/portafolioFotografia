@@ -386,8 +386,9 @@ div.recent_work_container section.recent_work div.recent_img div p {
 
 .photo-container {
     position: relative;
-    width: 100%;
+    width: auto;
     max-width: 350px;
+    min-width: 300px;
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
